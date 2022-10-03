@@ -1,4 +1,4 @@
-# ProyectoGestorClientes
+# Proyecto Gestor Clientes
 
 Trabajo realizado por Esther Rodríguez García
 
