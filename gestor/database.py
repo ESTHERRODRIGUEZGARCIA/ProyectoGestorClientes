@@ -6,3 +6,12 @@ class Cliente:
 
     def __str__(self):
         return f"({self.dni}) {self.nombre} {self.apellido}"
+
+class Clientes:
+# Lista de clientes
+    lista = []
+    @staticmethod
+    def buscar(dni):
+        for cliente in Clientes.lista:
+            if cliente.dni == dni:
+                return cliente
