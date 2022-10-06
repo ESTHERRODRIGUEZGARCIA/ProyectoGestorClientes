@@ -1,6 +1,7 @@
 import copy
 import unittest
 import database as db
+import helpers
 class TestDatabase(unittest.TestCase):
     def setUp(self):
         # Se ejecuta antes de cada prueba
@@ -35,3 +36,9 @@ class TestDatabase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    def test_dni_valido(self):
+        self.assertTrue(helpers.dni_valido('00A', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('23223S', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('F35', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('48H', db.Clientes.lista))
