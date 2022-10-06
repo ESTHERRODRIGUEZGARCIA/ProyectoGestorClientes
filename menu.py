@@ -1,6 +1,6 @@
 import os
 import helpers
-import database as db
+import test.database as db
 
 def iniciar():
     while True:
