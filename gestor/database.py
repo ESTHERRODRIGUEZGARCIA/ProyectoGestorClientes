@@ -1,3 +1,4 @@
+import csv
 class Cliente:
     def __init__(self, dni, nombre, apellido):
         self.dni = dni
