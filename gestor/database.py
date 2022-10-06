@@ -20,6 +20,7 @@ class Clientes:
     def crear(dni, nombre, apellido):
         cliente = Cliente(dni, nombre, apellido)
         Clientes.lista.append(cliente)
+        Clientes.guardar() 
         return cliente
     @staticmethod
     def modificar(dni, nombre, apellido):
