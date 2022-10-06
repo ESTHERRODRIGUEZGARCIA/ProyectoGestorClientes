@@ -62,7 +62,7 @@ class Clientes:
 
     @staticmethod
     def guardar():
-        with open("clientes.csv", "w", newline="\n") as fichero:
-            writer = csv.writer(fichero, delimiter=";")
-            for c in Clientes.lista:
-                writer.writerow((c.dni, c.nombre, c.apellido))
+        with open(config.DATABASE_PATH, 'w', newline='\n') as fichero:
+            writer = csv.writer(fichero, delimiter=';')
+            for cliente in Clientes.lista:
+                writer.writerow((cliente.dni, cliente.nombre, cliente.apellido))
