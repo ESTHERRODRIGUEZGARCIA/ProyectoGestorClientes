@@ -28,6 +28,7 @@ class Clientes:
             if cliente.dni == dni:
                 Clientes.lista[i].nombre = nombre
                 Clientes.lista[i].apellido = apellido
+                Clientes.guardar()
                 return Clientes.lista[i]
     
     @staticmethod
@@ -35,6 +36,7 @@ class Clientes:
         for i, cliente in enumerate(Clientes.lista):
             if cliente.dni == dni:
                 cliente = Clientes.lista.pop(i)
+                Clientes.guardar()
                 return cliente
     
     # Creamos la lista y cargamos los clientes en memoria
