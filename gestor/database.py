@@ -35,3 +35,18 @@ class Clientes:
             if cliente.dni == dni:
                 cliente = Clientes.lista.pop(i)
                 return cliente
+    
+    # Creamos la lista y cargamos los clientes en memoria
+    lista = []
+    with open("clientes.csv", newline="\n") as fichero:
+        reader = csv.reader(fichero, delimiter=";")
+        for dni, nombre, apellido in reader:
+            cliente = Cliente(dni, nombre, apellido)
+            lista.append(cliente)
+
+    @staticmethod
+    def guardar():
+        with open("clientes.csv", "w", newline="\n") as fichero:
+            writer = csv.writer(fichero, delimiter=";")
+            for c in Clientes.lista:
+                writer.writerow((c.dni, c.nombre, c.apellido))
