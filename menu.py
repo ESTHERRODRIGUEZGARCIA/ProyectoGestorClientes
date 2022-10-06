@@ -1,6 +1,10 @@
 import os
+import helpers
+
 def iniciar():
     while True:
+        helpers.limpiar_pantalla()
+        
         os.system('clear') # cls en Windows
         print("========================")
         print(" BIENVENIDO AL Manager ")
@@ -12,7 +16,10 @@ def iniciar():
         print("[5] Borrar cliente ")
         print("[6] Cerrar el Manager ")
         print("========================")
+
         opcion = input("> ")
+        helpers.limpiar_pantalla()
+
         os.system('clear') # cls en Windows
         if opcion == '1':
             print("Listando los clientes...\n")
@@ -28,3 +35,5 @@ def iniciar():
             print("Saliendo...\n")
             break
         input("\nPresiona ENTER para continuar...")
+
+helpers.limpiar_pantalla()
