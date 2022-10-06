@@ -1,4 +1,5 @@
 import csv
+import config
 class Cliente:
     def __init__(self, dni, nombre, apellido):
         self.dni = dni
@@ -11,6 +12,12 @@ class Cliente:
 class Clientes:
 # Lista de clientes
     lista = []
+    with open(config.DATABASE_PATH, newline="\n") as fichero: # ...
+    
+    @staticmethod
+    def guardar():
+        with open(config.DATABASE_PATH, "w", newline="\n") as fichero:
+    
     @staticmethod
     def buscar(dni):
         for cliente in Clientes.lista:
@@ -21,7 +28,7 @@ class Clientes:
     def crear(dni, nombre, apellido):
         cliente = Cliente(dni, nombre, apellido)
         Clientes.lista.append(cliente)
-        Clientes.guardar() 
+        Clientes.guardar()
         return cliente
     @staticmethod
     def modificar(dni, nombre, apellido):
