@@ -1,4 +1,4 @@
-from tkinter import *
+
 import gestor.helpers as helpers
 import gestor.database as db
 from tkinter import *
