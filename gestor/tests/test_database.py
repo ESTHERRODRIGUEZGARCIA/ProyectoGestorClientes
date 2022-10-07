@@ -1,7 +1,7 @@
 import copy
 import unittest
 import database as db
-import helpers
+import gestor.helpers as helpers
 class TestDatabase(unittest.TestCase):
     def setUp(self):
         # Se ejecuta antes de cada prueba
