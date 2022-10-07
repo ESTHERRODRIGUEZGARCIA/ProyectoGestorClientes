@@ -53,12 +53,6 @@ class Clientes:
                 return cliente
     
     # Creamos la lista y cargamos los clientes en memoria
-    lista = []
-    with open("clientes.csv", newline="\n") as fichero:
-        reader = csv.reader(fichero, delimiter=";")
-        for dni, nombre, apellido in reader:
-            cliente = Cliente(dni, nombre, apellido)
-            lista.append(cliente)
 
     @staticmethod
     def guardar():
